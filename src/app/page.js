@@ -1,6 +1,12 @@
+import Hero from "@/components/Hero"
 import markdownToHTML from "@/mypackage"
 
 export default async function Home() {
   const html = await markdownToHTML("# Hello, Neptune!")
-  return <div dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <>
+      <Hero />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  )
 }
